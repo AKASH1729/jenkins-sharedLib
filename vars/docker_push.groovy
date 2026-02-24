@@ -7,7 +7,7 @@ def call(String project, String imageTag, String dockerhubUser) {
         )
     ]) {
         sh '''
-            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+             echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin
         '''
 
         sh """
